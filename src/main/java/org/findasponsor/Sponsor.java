@@ -16,6 +16,38 @@ public class Sponsor {
 	private String county;
 	private List<TierRatingAndSubTier> tierAndRating = Lists.newArrayList();
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getCounty() {
+		return county;
+	}
+
+	public void setCounty(String county) {
+		this.county = county;
+	}
+
+	public List<TierRatingAndSubTier> getTierAndRating() {
+		return tierAndRating;
+	}
+
+	public void setTierAndRating(List<TierRatingAndSubTier> tierAndRating) {
+		this.tierAndRating = tierAndRating;
+	}
+
 	public Sponsor(String name, String city, String county) {
 		this.name = name;
 		this.city = city;
