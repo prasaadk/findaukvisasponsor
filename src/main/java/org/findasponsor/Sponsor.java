@@ -1,3 +1,5 @@
+package org.findasponsor;
+
 import java.util.List;
 
 import com.google.common.collect.Lists;

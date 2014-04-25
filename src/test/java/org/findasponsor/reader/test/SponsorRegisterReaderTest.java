@@ -1,7 +1,11 @@
-import static org.junit.Assert.*;
+package org.findasponsor.reader.test;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.Collection;
 
+import org.findasponsor.Sponsor;
+import org.findasponsor.reader.SponsorRegisterReader;
 import org.junit.Test;
 
 /**

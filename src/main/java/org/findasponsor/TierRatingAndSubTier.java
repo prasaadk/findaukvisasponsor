@@ -1,3 +1,4 @@
+package org.findasponsor;
 
 public class TierRatingAndSubTier {
 
