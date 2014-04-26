@@ -27,6 +27,11 @@ public class Sponsor {
 		tierAndRating.add(new TierRatingAndSubTier(tierRating, subTier));
 	}
 
+    public String getCity()  { return city;}
+    public String getCounty() { return county; }
+    public String getName()   { return name; }
+    public List<TierRatingAndSubTier> getTierAndRating() { return tierAndRating; }
+
 	@Override
 	public String toString() {
 		return "Sponsor [name=" + name + ", city=" + city + ", county="

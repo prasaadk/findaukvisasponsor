@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.StringReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,15 +24,19 @@ import com.google.common.collect.Lists;
  */
 public class SponsorRegisterReader {
 
-	public static final URL FILE_PATH = ClassLoader
-			.getSystemResource("Tiers_2___5_Register_of_Sponsors_2014-04-22.pdf");
-	public static final String DOC_URL = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/305166/Tiers_2___5_Register_of_Sponsors_2014-04-22.pdf";
+    //"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/305166/Tiers_2___5_Register_of_Sponsors_2014-04-22.pdf";
+	public String doc_url ;
 	public static final long HEADER_COUNT = 7;
+
+    public SponsorRegisterReader(final String doc_url){
+        this.doc_url = doc_url;
+    }
 
 	public Collection<Sponsor> getSponsors() throws IOException {
 		PDFTextStripper stripper = new PDFTextStripper();
-		PDFParser pdfParser = new PDFParser(new FileInputStream(
-				FILE_PATH.getFile()));
+        URL reqURL               = new URL(doc_url);
+        URLConnection urlCon     = reqURL.openConnection();
+		PDFParser pdfParser = new PDFParser(urlCon.getInputStream());
 		pdfParser.parse();
 		PDDocument load = pdfParser.getPDDocument();
 		stripper.setSortByPosition(true);
@@ -49,11 +54,11 @@ public class SponsorRegisterReader {
 		return extractSponsors(text);
 	}
 
-	private Collection<Sponsor> extractSponsors(String text) throws IOException {
+	private Collection<Sponsor> extractSponsors(final String text) throws IOException {
 		List<Sponsor> list = Lists.newArrayList();
 
 		BufferedReader reader = new BufferedReader(new StringReader(text));
-		String line = null;
+		String line ;
 
 		Sponsor sponsor = null;
 		boolean newSponsor = true;
