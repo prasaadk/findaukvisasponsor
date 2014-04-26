@@ -5,7 +5,8 @@ Search web app for Tier 2 and Tier 5 register of sponsors
 
 ### Run app
 
-```java -jar target/findasponsor-0.1-SNAPSHOT.jar index -help
+```
+java -jar target/findasponsor-0.1-SNAPSHOT.jar index -help
 usage: index [-h] URI host port
 
 Index the list of sponsors
