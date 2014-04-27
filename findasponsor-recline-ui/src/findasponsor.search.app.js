@@ -160,14 +160,15 @@ function setupMoreComplexExample(config) {
     searchView.render();
 
     dataset.queryState.set({
-        size: 20,
-        sort: 'city'
+        size: 20
       },
       {silent: true}
     );
     if (dataset.get('url') in templates) {
       dataset.queryState.addFacet('city');
-      dataset.queryState.addFacet('county');      
+      dataset.queryState.addFacet('county');
+      dataset.queryState.addFacet('tierAndRating.tierRating');
+      dataset.queryState.addFacet('tierAndRating.subTier');
     }
     dataset.query();
   });
