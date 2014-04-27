@@ -60,11 +60,11 @@ var SearchView = Backbone.View.extend({
     <div class="controls"> \
       <div class="query-here"></div> \
     </div> \
-    <div class="total"><h2><span></span> record(s) found</h2></div> \
+    <div class="total"><h2><span></span> sponsor(s) found</h2></div> \
     </br> \
     <div class="body"> \
       <div class="sidebar"></div> \
-      <div class="results"> \
+      <div class="results" style="overflow-y:auto; height:800px;"> \
         {{{results}}} \
       </div> \
     </div> \
@@ -143,8 +143,8 @@ function setupMoreComplexExample(config) {
     if (dataset.get('url') in templates) {
       dataset.queryState.addFacet('city');
       dataset.queryState.addFacet('county');
-      dataset.queryState.addFacet('tierAndRating.tierRating');
-      dataset.queryState.addFacet('tierAndRating.subTier');
+      dataset.queryState.addFacet('tierRating');
+      dataset.queryState.addFacet('subTier');
     }
     dataset.query();
   });
@@ -173,8 +173,11 @@ var templates = {
       <h3> \
         {{record.name}}  \
       </h3> \
-      <h4> \
+      <h4 class="city"> \
         <strong>{{record.city}}</strong>  \
+      </h4> \
+      <h4 class="county"> \
+        <strong>{{record.county}}</strong>  \
       </h4> \
       </br> \
       <ul> \

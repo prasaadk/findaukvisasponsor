@@ -3,6 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="keywords" content="Tier 2, Tier 5, Sponsors, Register of Sponsors, Worker visa, ICT, UK Visa, Tier 2 Visa, Tier 5 Visa, Tier 2 register of sponsors">
   <meta name="description" content="Search Tier 2 & Tier 5 sponsors by company names, city, county or by tier requirements. We develop this search application for job seekers who are trying hard to find companies that can sponsor visas. This is also a quick way for recruiters to find if their clients offer Tier 2 and Tier 5 sponsorships."> 
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -99,7 +100,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="./"><strong>Find a sponsor</strong></a>      
+      <a class="brand"><strong>Find a sponsor</strong></a>      
     </div>
   </div>
 </div>
@@ -114,6 +115,22 @@
 .record {
   border-bottom: #eee 1px solid;
   padding: 5px;
+}
+
+.record:nth-of-type(odd) { background-color: #EEEEEE; }
+
+.record:nth-of-type(even) { background-color: #FFFFFF; }
+
+.city {
+  font: 18px arial,sans-serif;
+  font-family: 'PT Sans',Helvetica, Arial, sans-serif;
+  color: #444444;
+}
+
+.county {
+  font: 18px arial,sans-serif;
+  font-family: 'PT Sans',Helvetica, Arial, sans-serif;
+  color: #AAAAAA;
 }
 
 .controls .query-here {  
@@ -177,14 +194,22 @@ ul.facet-items {
   list-style-type: none;
   margin-left: 0;
 }
+
+.elasticbrand {
+  font-family: 'Gibson-Regular', Arial;
+  color: #858c89;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 </style>
 
 <div class="page-header">
-  <h1>Search Tier 2 & Tier 5 Register of sponsors</h1>
+  <h1>Search Tier 2 & Tier 5 register of sponsors</h1>
 </div>
 
 <div class="info">
-  <p>Search <b>Tier 2</b> & <b>Tier 5</b> sponsors by <b>company names</b>, <b>city</b>, <b>county</b> or by tier requirements. We develop this search application for <b>job seekers</b> who are trying hard to find companies that can sponsor visas. This is also a quick way for <b>recruiters</b> to find if their clients offer Tier 2 and Tier 5 sponsorships.</p>
+  <p>Search <b>Tier 2</b> & <b>Tier 5</b> UK Visa sponsors by <b>company names</b>, <b>city</b>, <b>county</b> or by <b>tier requirements</b>. We develop this search application for <b>job seekers</b> who are trying hard to find companies that can sponsor visas. This is also a quick way for <b>recruiters</b> to find if their clients offer Tier 2 and Tier 5 sponsorships.</p>
   <p><strong>Disclaimer:</strong> We do not own this data and we thank UK government to make this data available. The source data for this search application is <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers">this.</a> Please do not conclude your findings based on the search below. Users please stay warned that this application may not at all times reflect the reality.</p>
 </div>
 
@@ -203,6 +228,8 @@ ul.facet-items {
       <a class="brand" href="./"><strong>powered by</strong></a>
       <img src="http://assets.okfn.org/p/recline/img/chair.png" height="50" width="50"/>
       <a class="brand" href="http://okfnlabs.org/recline/"><strong>Recline.js</strong></a>
+      <a class="brand">|</a>
+      <a class="elasticbrand" href="http://www.elasticsearch.org/" >elasticsearch.</a>
   </div>
 </section>
 
