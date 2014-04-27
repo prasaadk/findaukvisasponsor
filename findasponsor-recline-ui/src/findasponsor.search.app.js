@@ -25,32 +25,7 @@ jQuery(function($) {
     setupMoreComplexExample(config);
     return;
   }
-
-  // #### Custom template
-  // 
-  // Create a custom template for rendering the records
-  var template = ' \
-    <div class="record"> \
-      <h3> \
-        {{title}} <em>by {{Author}}</em> \
-      </h3> \
-      <p>{{description}}</p> \
-      <p><code>${{price}}</code></p> \
-    </div> \
-  ';
-
-  // #### Set up the search View (using custom template)
-  var searchView = new SearchView({
-    el: $el,
-    model: dataset,
-    template: template 
-  });
-  searchView.render();
-
-  // #### Finally - now do the first query
-  //
-  // After this point the Search View will take over handling queries!
-  dataset.query();
+  
 });
 
 
