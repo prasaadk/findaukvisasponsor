@@ -60,7 +60,8 @@ var SearchView = Backbone.View.extend({
     <div class="controls"> \
       <div class="query-here"></div> \
     </div> \
-    <div class="total"><h2><span></span> records found</h2></div> \
+    <div class="total"><h2><span></span> record(s) found</h2></div> \
+    </br> \
     <div class="body"> \
       <div class="sidebar"></div> \
       <div class="results"> \
