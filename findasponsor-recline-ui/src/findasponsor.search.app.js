@@ -26,15 +26,6 @@ jQuery(function($) {
     return;
   }
 
-  // ### 2. The simple example case
-  //
-  // We will just set up from some example local data (at the bottom of thile file)
-
-  // #### Create our Recline Dataset from sample local data
-  var dataset = new recline.Model.Dataset({
-    records: sampleData
-  });
-
   // #### Custom template
   // 
   // Create a custom template for rendering the records
@@ -55,14 +46,6 @@ jQuery(function($) {
     template: template 
   });
   searchView.render();
-
-  // #### Optional - we configure the initial query a bit and set up facets
-  dataset.queryState.set({
-      size: 10
-    },
-    {silent: true}
-  );
-  dataset.queryState.addFacet('Author');
 
   // #### Finally - now do the first query
   //
@@ -177,7 +160,8 @@ function setupMoreComplexExample(config) {
     searchView.render();
 
     dataset.queryState.set({
-        size: 50
+        size: 20,
+        sort: 'city'
       },
       {silent: true}
     );
@@ -215,20 +199,21 @@ var templates = {
       <h4> \
         <strong>{{record.city}}</strong>  \
       </h4> \
+      </br> \
       <ul> \
-       {{#data}} \
-         <li>{{key}}: {{value}}</li> \
-       {{/data}} \
+       {{#ratings}} \
+         <li>{{key}} &ndash; {{value}}</li> \
+       {{/ratings}} \
        </ul> \
     </div> \
     ';
-    var data = [];
-    _.each(_.keys(record), function(key) {
-      data.push({ key: key, value: record[key] });
+    var ratings = [];
+    _.each(record.tierAndRating, function(rating) {
+      ratings.push({ key: rating.tierRating, value: rating.subTier });
     });
     return Mustache.render(template, {
       record: record,
-      data: data
+      ratings: ratings
     });
   },
   
