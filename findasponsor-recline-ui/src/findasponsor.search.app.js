@@ -18,8 +18,15 @@ jQuery(function($) {
 
   // ### 1. More complex - use data from a backend configured in query string
 
-  // Check for config from url query string
-  var config = recline.View.parseQueryString(decodeURIComponent(window.location.search));
+  // Check for config from url query string  
+  //var config = recline.View.parseQueryString(decodeURIComponent(window.location.search));
+  
+  // Static way to configure backend, url query parameters not required here
+  var config = {
+    backend: 'elasticsearch',
+    url: 'http://localhost:9200'
+  };
+  
   if (config.backend) {
     // If we had it hand off to our more complex example setup
     setupMoreComplexExample(config);
