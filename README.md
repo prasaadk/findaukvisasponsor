@@ -1,7 +1,7 @@
 findaukvisasponsor
 ==================
 
-Visit [findaukvisasponsor.info]
+Visit the site [here](findaukvisasponsor.info "Search Tier 2 and Tier 5 register of sponsors")
 
 Search Tier 2 & Tier 5 sponsors by company names, city, county or by tier requirements. We develop this search application for job seekers who are trying hard to find companies that can sponsor visas. This is also a quick way for recruiters to find if their clients offer Tier 2 and Tier 5 sponsorships.
 
