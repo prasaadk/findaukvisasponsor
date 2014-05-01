@@ -1,5 +1,7 @@
-findasponsor
-============
+findaukvisasponsor
+==================
+
+Visit [findaukvisasponsor.info]
 
 Search Tier 2 & Tier 5 sponsors by company names, city, county or by tier requirements. We develop this search application for job seekers who are trying hard to find companies that can sponsor visas. This is also a quick way for recruiters to find if their clients offer Tier 2 and Tier 5 sponsorships.
 
@@ -22,10 +24,7 @@ optional arguments:
 
 ### Access search page
 
-Access below html page query parameters as described.
+Access below html page.
 ```
-findasponsor-recline-ui/index.html?backend=elasticsearch&url={elasticsearch-endpoint}
-
-e.g. 
-findasponsor-recline-ui/index.html?backend=elasticsearch&url=http://localhost:9200
+findasponsor-recline-ui/index.html
 ```
